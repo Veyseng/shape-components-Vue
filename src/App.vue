@@ -1,26 +1,46 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div id="app">
+    <h1 style="display: block">This is the root component</h1>
+    <div id="content">
+      <The-Triangle class="shape"/>
+      <The-Hexagon color="green" class="shape"/>
+      <The-Diamond color="#037ef3"/>
+      <The-Shape name="heart" color="purple"/>
+      <The-Shape name="star" color="black"/>
+    </div>
+    
+    
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
 export default {
   name: 'App',
-  components: {
-    HelloWorld
-  }
+  
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap');
+*{
+  width: 100%;
   text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
 }
+#app {
+  font-family: 'Raleway', sans-serif;
+  margin-top: 60px;
+ 
+}
+#content{
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+}
+.shape{
+  margin: 20px;
+}
+
 </style>
